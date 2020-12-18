@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 var conn = mysql.createConnection({
-  host:"databaselaboratorio13.csxhzxobwlpr.us-east-1.rds.amazonaws.com",
-  user:"admin",
-  password:"Tecsup3560",
-  database:"contactos"
+  host:process.env.host,
+  user:process.env.user,
+  password: process.env.password,
+  database: process.env.database,
 });
 conn.connect();
 module.exports = conn;
